@@ -18,6 +18,7 @@ const BikeForm = () => {
 
   const validateField = (key, value) => {
     let error = '';
+    const currentYear = new Date().getFullYear();
 
     switch (key) {
       case 'name':
@@ -27,14 +28,19 @@ const BikeForm = () => {
 
       case 'price':
       case 'mileage':
-        if (!/^\d*\.?\d*$/.test(value)) error = 'Must be a valid number';
+        if (!value.trim()) {
+          error = `${key} is required`;
+        } else if (!/^\d*\.?\d*$/.test(value)) {
+          error = 'Must be a valid number';
+        }
         break;
 
       case 'year':
-        const currentYear = new Date().getFullYear();
-        if (!/^\d*$/.test(value) || value.length > 4) {
-          error = 'Must be a valid year';
-        } else if (value.length === 4 && (Number(value) < 1990 || Number(value) > currentYear)) {
+        if (!value.trim()) {
+          error = `${key} is required`;
+        } else if (!/^\d{4}$/.test(value)) {
+          error = 'Must be a 4-digit year';
+        } else if (Number(value) < 1990 || Number(value) > currentYear) {
           error = `Year must be between 1990 and ${currentYear}`;
         }
         break;
@@ -48,6 +54,7 @@ const BikeForm = () => {
     }
 
     setErrors(prev => ({ ...prev, [key]: error }));
+    return error;
   };
 
   const handleChange = (key, value) => {
@@ -56,9 +63,20 @@ const BikeForm = () => {
   };
 
   const isFormValid = () => {
+    const keys = Object.keys(form);
+    let hasErrors = false;
     const newErrors = {};
-    Object.entries(form).forEach(([key, value]) => validateField(key, value));
-    return Object.values(errors).every(err => !err);
+
+    keys.forEach(key => {
+      const error = validateField(key, form[key]);
+      if (error) {
+        newErrors[key] = error;
+        hasErrors = true;
+      }
+    });
+
+    setErrors(newErrors);
+    return !hasErrors;
   };
 
   const handleSubmit = async (e) => {
