@@ -1,0 +1,115 @@
+.bike-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .bike-details img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .bike-details h2 {
+    margin-bottom: 16px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .bike-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .bike-details strong {
+    color: #222;
+  }
+  
+  .bike-details input {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .bike-details button {
+    margin: 10px 8px 0 0;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .bike-details button:nth-child(1) {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .bike-details button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .bike-details button:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 600px) {
+    .bike-details {
+      padding: 20px;
+    }
+  
+    .bike-details img {
+      max-height: 250px;
+    }
+  }
+  
+  .back-button {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    color: #007bff;
+  }
+  
+  .not-shortlisted-btn {
+    background-color: red;
+    color: white;
+  }
+  
+  .not-shortlisted-btn:hover {
+    background-color: darkred;
+  }
+  
+  /* Shortlisted - Yellow */
+  .shortlisted-btn {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .shortlisted-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  

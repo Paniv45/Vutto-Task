@@ -1,0 +1,134 @@
+.bike-list-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #0056b3;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .filters input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .bike-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .bike-list li {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .bike-list li:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .bike-list img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .bike-list h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  .bike-list p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .bike-list a {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bike-list a:hover {
+    background-color: #1e7e34;
+  }
+  
+  .bike-list button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Not Shortlisted - Red */
+  .not-shortlisted-btn {
+    background-color: red;
+    color: white;
+  }
+  
+  .not-shortlisted-btn:hover {
+    background-color: darkred;
+  }
+  
+  /* Shortlisted - Yellow */
+  .shortlisted-btn {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .shortlisted-btn:hover {
+    background-color: #e0a800;
+  }
+  
